@@ -1,0 +1,149 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>WebApp Dashboard</title>
+</head>
+<body class="grid-container">
+    <header>
+        <h1>WebApp</h1>
+     
+    </header>
+<nav>
+    <a href="">
+        <img src="" alt="">
+    </a>
+</nav>
+<main>
+    <div class="main-header">
+        <h2 class="headline">Dashboard</h2>
+            <div class="main-header-search">
+                <input type="search" placeholder="Search"/>
+            </div>
+    </div>
+<!-------------- Alert Banner -------------->
+    <div class="alert">
+<!--JS will insert alert here-->
+    </div>
+<!-------------- Line Graph Charts ---------------->
+<section class="traffic">
+    <div class="traffic-header">
+        <h3>Traffic</h3>
+        <ul class="traffic-nav">
+            <li class="traffic-nav-link">Hourly</li>
+            <li class="traffic-nav-link">Daily</li>
+            <li class="traffic-nav-link active">Weekly</li>
+            <li class="traffic-nav-link">Monthly</li>
+        </ul>
+    </div>
+    <div class="widget-container-full">
+        <!-- element line graph will attatch to -->
+        <canvas id="traffic-chart"></canvas>
+    </div>
+</section>
+<section class="daily">
+    <h3>Daily Traffic</h3>
+    <div class="widget-container-half">
+        <!-- element bar graph will attatch to -->
+        <canvas id="daily-chart"></canvas>
+    </div>
+</section>
+<!--------------------  Social Containers  ---------------------------->
+<div class="social-container">
+    <div class="social-image">
+        <!-- inline svg goes here-->
+    </div>
+    <div class="social-text">
+        <p>Facebook</p>
+        <p>10,345</p>
+    </div>
+</div>
+<div class="social-container">
+    <div class="social-image">
+        <!-- inline svg goes here-->
+    </div>
+    <div class="social-text">
+        <p>Instagram</p>
+        <p>10,345</p>
+    </div>
+</div>
+<div class="social-container">
+    <div class="social-image">
+        <!-- inline svg goes here-->
+    </div>
+    <div class="social-text">
+        <p>Twitter</p>
+        <p>10,345</p>
+    </div>
+</div>
+<!--------------------  New Members Widget  ---------------------------->
+<section class="members">
+    <h3>New Members</h3>
+    <div class="members-container">
+        <img src="images/member-1.jpg" class="profile-image">
+        <div class="members-text">
+            <p>Victoria Chambers</p>
+            <a href="#">victoria.chambers80@example.com</a>
+        </div>
+        <p>10/15/20</p>
+    </div>
+    <div class="members-container">
+        <img src="images/member-2.jpg" class="profile-image">
+        <div class="members-text">
+            <p>Dale Byrd</p>
+            <a href="#">dale.byrd52@example.com</a>
+        </div>
+        <p>10/15/20</p>
+    </div>
+    <div class="members-container">
+        <img src="images/member-3.jpg" class="profile-image">
+        <div class="members-text">
+            <p>Dawn Wood</p>
+            <a href="#">dawn.wood16@example.com</a>
+        </div>
+        <p>10/15/20</p>
+    </div>
+    <div class="members-container">
+        <img src="images/member-4.jpg" class="profile-image">
+        <div class="members-text">
+            <p>Dan Oliver</p>
+            <a href="#">dan.oliver82@example.com</a>
+        </div>
+        <p>10/15/20</p>
+    </div>
+</section>
+<!--------------Meessaging Widget----------------->
+<section class="message">
+    <h3>Message User</h3>
+    <form class="widget-container">
+        <input type="text" placeholder="Search for user" class="form-field" id="userField">
+        <textarea placeholder="Message for user" class="form-area" id="messageField"></textarea>
+        <button class="button-primary" id="send">Send</button>
+    </form>
+</section>
+
+<!-------------     Local Settings Widget    ------------>
+<section class="settings">
+    <h3>settings</h3>
+        <!-- custom css toggle code -->
+        <!-- custom css toggle code -->
+    <select class="form-field" id="timezone">
+        <option disabled selected>Select a Timezone</option>
+        <option>Eastern</option>
+        <option>Central</option>
+        <option>Mountain</option>
+        <option>Pacific</option>
+        <!-- more options -->
+    </select>
+    <div class="settings-button">
+        <button class="button-primary" id="save">Save</button>
+        <button class="button-disabled" id="cancel">Cancel</button>
+    </div>
+</section>
+
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.0/chart.js" integrity="sha512-+POM1aKUkb5l91zDBDtxn0dlY5wazuQFtCXin/47Z+eE7AnMuFBMrNjkZA1P6m+infsMMSthlsPNh1rjBtAPBA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
