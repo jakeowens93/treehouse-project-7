@@ -2,47 +2,39 @@
     font-family: 'Catamaran', sans-serif;
 }
 
-.grid-container{
+.grid-container {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto;
-    grid-template-areas: 
-        "header"
-        "navigation"
-        "main";
+    grid-template-areas: "header""navigation" "main";
 }
-
 .header{
     grid-area: header;
-    display: flex;
-    flex-direction: row; 
-    justify-content: flex-start;
-    align-items: center;
-    padding: 10px;
 }
-.navigation{
+.navigation {
     grid-area: navigation;
+    background-color: rgb(69, 42, 87);
 }
-.main{
+.icon{
+    width: 40px;
+    height: 40px;
+    margin: 7px;
+}
+.main {
     grid-area: main;
 }
-
 @media (min-width: 768px) {
     .grid-container{
         grid-template-columns: 55px 1fr;
-        grid-template-areas: 
-            "header header"
-            "navigation main";
+        grid-template-areas: "header header" "navigation main";
     }
-    .traffic, .social {
+    .traffic, .social{
         grid-column: 1 / span 2;
     }
-}
-.main {
-    display: grid;
-}
-@media (min-width: 768px) {
-    .main{
-        grid-template-columns: 50%;
+    .dialy, .members, .message {
+        grid-column: 1 / span 1;
+    }
+    .mobile, .activity, .settings {
+        grid-column: 2 / span 1;
     }
 }
