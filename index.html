@@ -3,20 +3,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&display=swap" rel="stylesheet">
+    <link href="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>WebApp Dashboard</title>
 </head>
 <body class="grid-container">
-    <header>
+    <header class="header">
         <h1>WebApp</h1>
      
     </header>
-<nav>
-    <a href="">
-        <img src="" alt="">
+<nav class="navigation">
+    <a href="#home">
+        <img src="svgs/home.svg" alt="home icon">
+    </a>
+    <a href="#traffic">
+        <img src="svgs/bar-chart.svg" alt="traffic icon">
+    </a>
+    <a href="#members">
+        <img src="svgs/members.svg" alt="members icon">
+    </a>
+    <a href="#settings">
+        <img src="svgs/settings.svg" alt="settings icon">
     </a>
 </nav>
-<main>
+<main class="main">
     <div class="main-header">
         <h2 class="headline">Dashboard</h2>
             <div class="main-header-search">
@@ -28,7 +41,7 @@
 <!--JS will insert alert here-->
     </div>
 <!-------------- Line Graph Charts ---------------->
-<section class="traffic">
+<section class="traffic" id="traffic">
     <div class="traffic-header">
         <h3>Traffic</h3>
         <ul class="traffic-nav">
@@ -79,7 +92,7 @@
     </div>
 </div>
 <!--------------------  New Members Widget  ---------------------------->
-<section class="members">
+<section class="members" id="members">
     <h3>New Members</h3>
     <div class="members-container">
         <img src="images/member-1.jpg" class="profile-image">
@@ -125,7 +138,7 @@
 </section>
 
 <!-------------     Local Settings Widget    ------------>
-<section class="settings">
+<section class="settings" id="settings">
     <h3>settings</h3>
         <!-- custom css toggle code -->
         <!-- custom css toggle code -->
