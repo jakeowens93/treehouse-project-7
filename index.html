@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
     <link href="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>WebApp Dashboard</title>
@@ -13,7 +13,13 @@
 <body class="grid-container">
     <header class="header">
         <h1>WebApp</h1>
-     
+     <div class="notifications" id="notifications">
+
+     </div>
+     <div class="active-user">
+        <img class="profile-image-active" src="images/member-1.jpg" alt="profile photo of active user">
+        <h3 class="student-name">Student Name</h3>
+     </div>
     </header>
 <nav class="navigation">
     <a href="#home">
@@ -63,8 +69,15 @@
         <canvas id="daily-chart"></canvas>
     </div>
 </section>
+<section class="mobile">
+    <h3>Mobile Users</h3>
+    <div class="widget-container-half">
+        <canvas id="mobile-chart"></canvas>
+    </div>
+</section>
 <!--------------------  Social Containers  ---------------------------->
 <div class="social">
+    <h3>Social Stats</h3>
     <div class="social-container">
         <div class="social-image">
             <!-- inline svg goes here-->
@@ -100,7 +113,7 @@
         <img src="images/member-1.jpg" class="profile-image">
         <div class="members-text">
             <p>Victoria Chambers</p>
-            <a href="#">victoria.chambers80@example.com</a>
+            <a href="mailto:victoria.chambers80@example.com">victoria.chambers80@example.com</a>
         </div>
         <p>10/15/20</p>
     </div>
@@ -108,7 +121,7 @@
         <img src="images/member-2.jpg" class="profile-image">
         <div class="members-text">
             <p>Dale Byrd</p>
-            <a href="#">dale.byrd52@example.com</a>
+            <a href="mailto:dale.byrd52@example.com">dale.byrd52@example.com</a>
         </div>
         <p>10/15/20</p>
     </div>
@@ -116,7 +129,7 @@
         <img src="images/member-3.jpg" class="profile-image">
         <div class="members-text">
             <p>Dawn Wood</p>
-            <a href="#">dawn.wood16@example.com</a>
+            <a href="mailto:dawn.wood16@example.com">dawn.wood16@example.com</a>
         </div>
         <p>10/15/20</p>
     </div>
@@ -124,9 +137,41 @@
         <img src="images/member-4.jpg" class="profile-image">
         <div class="members-text">
             <p>Dan Oliver</p>
-            <a href="#">dan.oliver82@example.com</a>
+            <a href="mailto:dan.oliver82@example.com">dan.oliver82@example.com</a>
         </div>
         <p>10/15/20</p>
+    </div>
+</section>
+
+<section class="recent-activity">
+    <h3>Recent Activity</h3>
+    <div class="member-activity">
+        <img src="images/member-1.jpg" class="profile-image" alt="photo of Victoriai Chabers">
+        <div class="members-text">
+            <p>Victoria Chambers commented on <strong>WebApp's SEO Tips</strong></p>
+            <p>4 hours ago</p>
+        </div>
+    </div>
+    <div class="member-activity">
+        <img src="images/member-2.jpg" class="profile-image" alt="photo of Dale Byrd">
+        <div class="members-text">
+            <p>Dale Byrd liked the post <strong>Facebook's Changes for 2021</strong></p>
+            <p>5 hours ago</p>
+        </div>
+    </div>
+    <div class="member-activity">
+        <img src="images/member-3.jpg" class="profile-image" alt="photo of Dawn Wood">
+        <div class="members-text">
+            <p>Dawn Wood commented on <strong>Facebook's Changes for 2021</strong></p>
+            <p>5 hours ago</p>
+        </div>
+    </div>
+    <div class="member-activity">
+        <img src="images/member-4.jpg" class="profile-image" alt="photo of Dan Oliver">
+        <div class="members-text">
+            <p>Dan Oliver posted <strong>WebApp's SEO Tips</strong></p>
+            <p>1 day ago</p>
+        </div>
     </div>
 </section>
 <!--------------Meessaging Widget----------------->
@@ -141,7 +186,7 @@
 
 <!-------------     Local Settings Widget    ------------>
 <section class="settings" id="settings">
-    <h3>settings</h3>
+    <h3>Settings</h3>
         <!-- custom css toggle code -->
         <!-- custom css toggle code -->
     <select class="form-field" id="timezone">
