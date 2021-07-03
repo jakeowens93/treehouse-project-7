@@ -1,6 +1,6 @@
 
 :root{
-    --dark-purple: rgb(74, 55, 87);
+    --dark-purple: rgb(70, 67, 99);
     --light-purple: rgb(110, 95, 175);
     --dark-grey: rgb(141, 141, 141);
     --light-grey: rgb(219, 219, 219);
@@ -9,6 +9,35 @@
 
 * {
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+.main-header{
+    grid-area: 1 / 1;
+    display: flex;
+    flex-direction: row;
+}
+h1{
+    font-weight: 300;
+    margin-left: 20px;
+}
+h2{
+    font-size: 24px;
+    font-weight: 300;
+    flex: 1;
+}
+h3{
+    padding: 7px;
+    margin-left: 7px;
+}
+.main-header-search{
+    background-color: var(--light-grey);
+    border-left: 1px solid var(--dark-grey);
+    border-bottom: 1px solid var(--dark-grey);
+    flex: 2;
+}
+body{
+    width: 100%;
+    margin: 0;
 }
 
 .grid-container {
@@ -23,6 +52,8 @@
     color: white;
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
 }
 .active-user {
     display: flex;
@@ -37,17 +68,25 @@
     grid-area: navigation;
     background-color: var(--dark-purple);
     display: flex;
+    justify-content: space-evenly;
+}
+.navigation a{
+    display: flex;
     justify-content: center;
 }
 .icon{
-    width: 40px;
-    height: 40px;
+    width: 60%;
+    height: auto;
     margin: 7px;
     padding: 0 10px;
 }
 .main {
     grid-area: main;
     display: grid;
+}
+section{
+    border-bottom: 1px solid var(--dark-grey);
+    border-left: 1px solid var(--dark-grey);
 }
 /* ===== Traffic ===== */
 .traffic-header{
@@ -68,6 +107,7 @@
 .social{
     display: flex;
     flex-direction: column;
+    border-bottom: 1px solid var(--dark-grey);
 }
 .social-container{
     margin: 10px;
@@ -85,13 +125,27 @@
     flex-direction: column;
     align-items: center;
     padding: 10px;
+    border-bottom: 1px solid var(--dark-grey);
+    width: 90%;
+    margin: auto;
+}
+.members-container:last-child, .member-activity:last-child{
+    border-bottom: none;
+}
+.members-container a{
+    text-decoration: none;
+    color: var(--light-purple);
 }
 .members-text{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.message, .widget-container{
+.members-text p{
+    margin: 0;
+    font-weight: lighter;
+}
+.message, .settings, .widget-container{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -99,10 +153,12 @@
 }
 .profile-image, .profile-image-active{
     border-radius: 50%;
+    margin-bottom: 10px;
 }
 .profile-image-active{
     height: 60px;
     width: 60px;
+    margin-bottom: 0;
 }
 
 /* ===== Form Fields ===== */
@@ -116,49 +172,108 @@
     color:white;
     border-radius: 5px;
     border: 1px var(--light-grey) solid;
+    width: 100%;
+    text-transform: uppercase;
 
 }
 .button-disabled{
     background-color:rgb(141, 141, 141);
 }
+.button-primary:hover, .button-disabled:hover{
+    cursor:pointer;
+}
+/*====== Settings ======*/
 
+.settings-button{
+    display: flex;
+    justify-content: space-between;
+}
 .widget-container-full, .widget-container-half {
     width: 95vw;
 }
 
 /* ========= Media Queries ========= */
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .grid-container{
         grid-template-columns: 55px 1fr;
+        grid-template-rows: auto;
         grid-template-areas: "header header" "navigation main";
     }
+    .header{
+        display: flex;
+        align-items: left;
+    }
     .navigation{
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
     .icon{
-        padding: 10px 5px;
-        margin: 0px;
+        height: 100%;
+        width: auto;
+        margin: auto;
+        padding-top: 10px;
     }
-    .main{
-        grid-template-columns: 50%;
+  
+     .recent-activity, .main-header, .alert{
+        grid-column: 1 / span 2;
     }
     .social{
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .social h3{
+        width: 100%;
+    }
+    .social-container{
+        width: 30%;
     }
     .traffic, .social{
         grid-column: 1 / span 2;
     }
-    .dialy, .members, .message {
+    .dialy {
         grid-column: 1 / span 1;
+        grid-row-start: 4;
     }
-    .mobile, .activity, .settings {
+    .members, .message{
+        grid-column: 1 / span 2;
+    }
+    .mobile {
         grid-column: 2 / span 1;
+        grid-row-start: 4; 
+    }
+    .activity, .settings{
+        grid-column-start: 1;
+        grid-column-end: span 2;
+    }
+      .main{
+        grid-template-columns: 50%;
+        grid-template-areas: 
+        "alert alert"
+        "traffic traffic"
+        "daily mobile"
+        "social social"
+        "members members"
+        "message message"
+        "settings settings"
     }
     .widget-container-full{
         width: 90vw;
     }
     .widget-container-half{
         width: 45vw;
+    }
+}
+@media screen and (min-width: 1024px){
+    .traffic, .main-header{
+        grid-column: 1 / span 2;
+    }
+    .dialy, .members, .message {
+        grid-column: 1 / span 1;
+    }
+    .mobile, .recent-activity, .settings {
+        grid-column: 2 / span 1;
     }
 }
