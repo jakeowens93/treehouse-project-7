@@ -1,7 +1,7 @@
 
 :root{
     --dark-purple: rgb(70, 67, 99);
-    --light-purple: rgb(110, 95, 175);
+    --light-purple: rgb(127, 113, 192);
     --dark-grey: rgb(141, 141, 141);
     --light-grey: rgb(219, 219, 219);
 }
@@ -28,6 +28,19 @@ h2{
 h3{
     padding: 7px;
     margin-left: 7px;
+}
+.alert-banner{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.alert{
+    background-color: var(--light-purple);
+    color: white;
+    border-radius: 5px;
+    margin: 20px 10px;
+    padding: 5px 20px;
 }
 .main-header-search{
     background-color: var(--light-grey);
