@@ -81,6 +81,10 @@ body{
 .bell-icon{
     fill: white;
     width: 40px;
+    transition: transform .2s;
+}
+.bell-icon:hover{
+    transform: rotate(15deg);
 }
 .bell-dot{
     border-radius: 50%;
