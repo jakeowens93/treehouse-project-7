@@ -2,8 +2,9 @@
 :root{
     --dark-purple: rgb(70, 67, 99);
     --light-purple: rgb(127, 113, 192);
-    --dark-grey: rgb(141, 141, 141);
+    --dark-grey: rgb(110, 110, 110);
     --light-grey: rgb(219, 219, 219);
+    --green: rgb(104, 168, 93);
 }
 
 
@@ -68,6 +69,28 @@ body{
     flex-direction: row;
     align-items: center;
 }
+.header-right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.notifications{
+    padding: 10px;
+    border-right: 1px solid var(--light-grey);
+}
+.bell-icon{
+    fill: white;
+    width: 40px;
+}
+.bell-dot{
+    border-radius: 50%;
+    background-color: rgb(121, 211, 79);
+    height: 8px;
+    width: 8px;
+    position: relative;
+    top: -45px;
+    left: 35px;
+}
 .active-user {
     display: flex;
     flex-direction: row;
@@ -92,6 +115,7 @@ body{
     height: auto;
     margin: 7px;
     padding: 0 10px;
+    fill: white;
 }
 .main {
     grid-area: main;
@@ -123,12 +147,39 @@ section{
     border-bottom: 1px solid var(--dark-grey);
 }
 .social-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     margin: 10px;
-    padding: 10px;
+    padding: 20px;
     background-color: var(--light-grey);
     border: 1px solid;
     border-color: var(--dark-grey);
     border-radius: 5px;
+}
+.social-text{
+    text-align: left;
+    margin: 5px;
+}
+.social-text p{
+    margin: 5px 20px;
+}
+.social-text p:first-child{
+    color: var(--light-purple);
+    font-weight: 500;
+}
+.social-text p:last-child{
+    color: var(--dark-grey);
+    font-weight: 300;
+    font-size: 30px;
+}
+.social-image{
+    height: 60px;
+    width: 60px;
+    background-color: var(--light-purple);
+    fill: white;
+    border-radius: 50%;
+    border: 7px solid var(--light-purple);
 }
 
 /* ===== Member block ===== */
@@ -139,6 +190,7 @@ section{
     align-items: center;
     padding: 10px;
     border-bottom: 1px solid var(--dark-grey);
+    height: 230px;
     width: 90%;
     margin: auto;
 }
