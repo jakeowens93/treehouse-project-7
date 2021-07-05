@@ -4,7 +4,7 @@
     --light-purple: rgb(127, 113, 192);
     --dark-grey: rgb(110, 110, 110);
     --light-grey: rgb(219, 219, 219);
-    --green: rgb(104, 168, 93);
+    --green: #70c66b;
 }
 
 
@@ -188,7 +188,17 @@ section{
     border-radius: 50%;
     border: 7px solid var(--light-purple);
 }
-
+.form-area, .form-field {
+    background-color: var(--light-grey);
+    color: var(--dark-grey);
+}
+.form-area{
+    height: 150px;
+}
+.form-field{
+    height: 30px;
+    border-radius: 2px;
+}
 /* ===== Member block ===== */
 
 .members-container, .member-activity {
@@ -246,6 +256,7 @@ section{
     border: 1px var(--light-grey) solid;
     width: 100%;
     text-transform: uppercase;
+    height: 40px;
 
 }
 .button-disabled{
@@ -260,6 +271,18 @@ section{
     display: flex;
     justify-content: space-between;
 }
+.switches{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 10px 0 20px;
+}
+.switch-light{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .widget-container-full, .widget-container-half {
     width: 95vw;
 }

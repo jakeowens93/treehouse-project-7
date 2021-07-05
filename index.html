@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="stylesheet" href="css/toggle-switch.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
@@ -207,8 +208,26 @@
 <!-------------     Local Settings Widget    ------------>
 <section class="settings" id="settings">
     <h3>SETTINGS</h3>
-        <!-- custom css toggle code -->
-        <!-- custom css toggle code -->
+    <div class="switches">
+        <label class="switch-light switch-ios" onclick="">
+            <input type="checkbox" id="emailSetting">
+            <strong>Send Email Notifications</strong>
+            <span>
+            <span>OFF</span>
+            <span>ON</span>
+            <a></a>
+            </span>
+        </label>
+        <label class="switch-light switch-candy" onclick="">
+            <input type="checkbox" id="publicSetting">
+            <strong>Set Profile to Public</strong>
+            <span>
+              <span>OFF</span>
+              <span>ON</span>
+              <a></a>
+            </span>
+          </label>
+    </div>
     <select class="form-field" id="timezone">
         <option disabled selected>Select a Timezone</option>
         <option>Eastern</option>
