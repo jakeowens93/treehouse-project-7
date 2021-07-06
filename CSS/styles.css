@@ -247,7 +247,17 @@ section{
 
 .form-field, .form-area{
     margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: lighter;
 }
+.form-field{
+    height: 40px;
+}
+.form-area{
+    height: 200px;
+}
+
 .button-primary, 
 .button-disabled{
     background-color:var(--light-purple);
@@ -271,16 +281,24 @@ section{
     display: flex;
     justify-content: space-between;
 }
-.switches{
+.toggle-container{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     margin: 10px 0 20px;
+    justify-content: space-around;
+}
+label strong{
+    flex-basis: 209px;
 }
 .switch-light{
     display: flex;
-    flex-direction: row;
     align-items: center;
+    margin: 5px;
+    justify-content: space-between;
+}
+.toggle-switch{
+    max-width: 70px;
+    cursor: pointer;
 }
 
 .widget-container-full, .widget-container-half {

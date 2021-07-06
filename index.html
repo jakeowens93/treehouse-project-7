@@ -3,11 +3,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="stylesheet" href="css/toggle-switch.css">
+    <link rel="stylesheet" href="css/toggle-switch.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
-    <link href="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>WebApp Dashboard</title>
 </head>
@@ -208,25 +208,25 @@
 <!-------------     Local Settings Widget    ------------>
 <section class="settings" id="settings">
     <h3>SETTINGS</h3>
-    <div class="switches">
+    <div class="toggle-container">
         <label class="switch-light switch-ios" onclick="">
-            <input type="checkbox" id="emailSetting">
+            <input type="checkbox">
             <strong>Send Email Notifications</strong>
-            <span>
+            <span class="toggle-switch">
             <span>OFF</span>
-            <span>ON</span>
+            <span class="slider">ON</span>
             <a></a>
             </span>
         </label>
-        <label class="switch-light switch-candy" onclick="">
-            <input type="checkbox" id="publicSetting">
+        <label class="switch-light switch-ios" onclick="">
+            <input type="checkbox">
             <strong>Set Profile to Public</strong>
-            <span>
-              <span>OFF</span>
-              <span>ON</span>
-              <a></a>
+            <span class="toggle-switch">
+            <span>OFF</span>
+            <span class="slider">ON</span>
+            <a></a>
             </span>
-          </label>
+        </label>
     </div>
     <select class="form-field" id="timezone">
         <option disabled selected>Select a Timezone</option>
