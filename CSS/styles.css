@@ -349,6 +349,9 @@ label strong{
         font-size: 2em;
         margin-left: 20px;
     }
+    h3{
+        margin-left: 10px;
+    }
     .bell-icon{
         width: 30px;
     }
@@ -435,12 +438,19 @@ label strong{
         color: var(--light-purple);
         font-size: 2em;
         font-weight: lighter;
+        margin-left: auto;
+    }
+    .post-date{
+        margin-left: auto;
     }
     .members-container, .member-activity {
         flex-direction: row;
         align-items: center;
-        margin: auto;
-        justify-content: space-between;    }
+        }
+    .members-text{
+        margin-left: 10px;
+        display: block;
+    }
     .widget-container-full{
         width: 90vw;
     }
