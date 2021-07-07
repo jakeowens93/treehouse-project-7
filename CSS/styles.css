@@ -336,7 +336,6 @@ label strong{
 .widget-container-full, .widget-container-half {
     width: 95vw;
 }
-
 /* ========= Media Queries ========= */
 
 @media screen and (min-width: 768px) {
