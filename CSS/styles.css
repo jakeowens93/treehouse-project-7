@@ -7,7 +7,6 @@
     --green: #70c66b;
 }
 
-
 * {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
@@ -343,7 +342,6 @@ label strong{
     }
     .header{
         display: flex;
-        align-items: left;
     }
     .navigation{
         display: flex;
